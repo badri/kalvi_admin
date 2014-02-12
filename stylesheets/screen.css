@@ -3115,28 +3115,15 @@ span.username {
   border: none;
 }
 
-/* line 42, ../sass/screen.scss */
-#preloader {
-  position: absolute;
-  top: 2rem;
-  left: 10rem;
-  z-index: 100;
-  padding: 5px;
-  text-align: center;
-  background-color: #fff;
-  border: 1px solid #111;
-  display: none;
-}
-
-/* line 54, ../sass/screen.scss */
+/* line 43, ../sass/screen.scss */
 #tabs {
   width: 140px;
   position: fixed;
   left: 0px;
-  top: 60px;
+  top: 7%;
   z-index: 100;
 }
-/* line 60, ../sass/screen.scss */
+/* line 49, ../sass/screen.scss */
 #tabs ul {
   list-style: none;
   border-bottom: 4px solid #ccc;
@@ -3147,7 +3134,7 @@ span.username {
   list-style-type: none;
   margin-left: 0;
 }
-/* line 63, ../sass/screen.scss */
+/* line 52, ../sass/screen.scss */
 #tabs ul li {
   -webkit-transition-property: width;
   -moz-transition-property: width;
@@ -3162,28 +3149,28 @@ span.username {
   border: none;
   background: #ececec;
 }
-/* line 70, ../sass/screen.scss */
+/* line 59, ../sass/screen.scss */
 #tabs ul li.active {
   padding-bottom: 0;
   background: #ffec8b;
   width: 150px;
 }
-/* line 74, ../sass/screen.scss */
+/* line 63, ../sass/screen.scss */
 #tabs ul li.active i {
   margin-left: 50px;
 }
-/* line 77, ../sass/screen.scss */
+/* line 66, ../sass/screen.scss */
 #tabs ul li.active:hover {
   background: #ffec8b;
 }
-/* line 81, ../sass/screen.scss */
+/* line 70, ../sass/screen.scss */
 #tabs ul li div {
   font-family: 'Open Sans', sans-serif;
   font-weight: bold;
   text-shadow: 2px 1px 0px #fff;
   margin-top: 4px;
 }
-/* line 87, ../sass/screen.scss */
+/* line 76, ../sass/screen.scss */
 #tabs ul li:hover {
   background: #dfdfdf;
   -webkit-transition-property: width;
@@ -3196,7 +3183,7 @@ span.username {
   transition-duration: 0.2s;
   width: 150px;
 }
-/* line 92, ../sass/screen.scss */
+/* line 81, ../sass/screen.scss */
 #tabs ul li:hover i {
   -webkit-transition-property: margin-left;
   -moz-transition-property: margin-left;
@@ -3208,7 +3195,7 @@ span.username {
   transition-duration: 0.2s;
   margin-left: 50px;
 }
-/* line 99, ../sass/screen.scss */
+/* line 88, ../sass/screen.scss */
 #tabs ul li i {
   -webkit-transition-property: margin-left;
   -moz-transition-property: margin-left;
@@ -3221,7 +3208,7 @@ span.username {
   margin-left: 45px;
   text-shadow: 2px 1px 0px #fff;
 }
-/* line 105, ../sass/screen.scss */
+/* line 94, ../sass/screen.scss */
 #tabs ul li a {
   -webkit-box-shadow: -4px 13px 11px rgba(51, 51, 51, 0.5);
   -moz-box-shadow: -4px 13px 11px rgba(51, 51, 51, 0.5);
@@ -3232,7 +3219,62 @@ span.username {
   float: none;
   color: #111;
 }
-/* line 112, ../sass/screen.scss */
+/* line 101, ../sass/screen.scss */
 #tabs ul li a:focus {
   outline: none;
+}
+
+/* line 111, ../sass/screen.scss */
+#box {
+  margin-top: 4%;
+  border-bottom: 4px solid #111;
+  padding: 0;
+}
+
+/* course styles */
+/* line 119, ../sass/screen.scss */
+#course-tabs {
+  margin-left: 8%;
+}
+/* line 121, ../sass/screen.scss */
+#course-tabs a {
+  margin: 0;
+}
+/* line 124, ../sass/screen.scss */
+#course-tabs i {
+  padding-right: 5px;
+}
+
+/* line 130, ../sass/screen.scss */
+.tab-button {
+  -webkit-box-shadow: -4px 2px 5px rgba(51, 51, 51, 0.5);
+  -moz-box-shadow: -4px 2px 5px rgba(51, 51, 51, 0.5);
+  box-shadow: -4px 2px 5px rgba(51, 51, 51, 0.5);
+  font-family: 'Droid Sans', sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  background: #ececec;
+  padding-left: 3em;
+  padding-right: 3em;
+  color: #111;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
+}
+/* line 140, ../sass/screen.scss */
+.tab-button:focus {
+  background-color: #ffec8b;
+  color: #111;
+}
+/* line 144, ../sass/screen.scss */
+.tab-button:hover {
+  background-color: #dfdfdf;
+  color: #111;
+}
+/* line 147, ../sass/screen.scss */
+.tab-button:hover:focus {
+  background-color: #ffec8b;
+  color: #111;
 }
