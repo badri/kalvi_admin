@@ -1,0 +1,112 @@
+
+@import "compass/reset";
+@import "compass/css3";
+@import "compass/css3/border-radius";
+@import "compass/css3/text-shadow";
+
+@import 'susy';
+
+$total-columns: 12;
+$column-width: 60px;
+$gutter-width: 20px;
+$grid-padding: 10px;
+
+$container-style: fluid;
+
+$selected-tab: #ffec8b;
+$normal-tab: #ececec;
+
+@import "compass-ui/theme/absolution";
+
+@include absolution-theme;
+
+#tabs {
+    @include container;
+    padding-left: 0px;
+    background: #fff;
+    border: none;
+}
+
+#preloader {
+    position: absolute;
+    top: 2rem;
+    left: 10rem;
+    z-index: 100;
+    padding: 5px;
+    text-align: center;
+    background-color: #fff;
+    border: 1px solid #111;
+    display: none;
+}
+
+.ui-tabs-vertical {
+    .ui-tabs-nav {
+        @include span-columns(1);
+        border-bottom-width: 4px !important;
+	li {
+	    @include transition-property(width);
+	    @include transition-duration(0.2s);
+	    clear: left;
+	    width: 120px;
+	    border: none;
+	    &.ui-tabs-active {
+		padding-bottom: 0;
+	    }
+	    div {
+		font-family: 'Open Sans', sans-serif;
+		font-weight: bold;
+		text-shadow: 2px 1px 0px #fff;
+		margin-top: 4px;
+	    }
+	    &:hover {
+                background: $selected-tab;
+		@include transition-property(width);
+		@include transition-duration(0.2s);
+		width: 130px;
+		i {
+		    @include transition-property(margin-left);
+		    @include transition-duration(0.2s);
+		    margin-left: 32px;
+		}
+
+            }
+	    i {
+		@include transition-property(margin-left);
+		@include transition-duration(0.2s);
+		margin-left: 26px;
+		text-shadow: 2px 1px 0px #fff;
+	    }
+	    a {
+	        /* @include single-box-shadow(rgba(#333, 0.5), -4px, 13px, 11px); */
+		display:block;
+		padding-top: 20px;
+                height: 80px;
+		float: none;
+		&:focus {
+		    outline: none;
+		}
+	    }
+
+	}
+
+    }
+    .ui-tabs-panel {
+	@include span-columns(10);
+    }
+}
+
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+    background: none;
+}
+
+.ui-tabs .ui-tabs-nav li.ui-state-hover {
+    background: darken($normal-tab, 5%);
+}
+
+.ui-tabs .ui-tabs-nav li.ui-state-active, .ui-tabs .ui-tabs-nav li.ui-tabs-selected {
+    background: $selected-tab;
+    width: 130px;
+    i {
+	margin-left: 32px;
+    }
+}
