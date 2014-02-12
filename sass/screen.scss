@@ -60,9 +60,6 @@ span.username {
 		padding-bottom: 0;
 		background: $selected-tab;
 		width: 150px;
-		i {
-		    margin-left: 50px;
-		}
 	        &:hover {
 		    background: $selected-tab;
 		}
@@ -78,17 +75,9 @@ span.username {
 		@include transition-property(width);
 		@include transition-duration(0.2s);
 		width: 150px;
-		i {
-		    @include transition-property(margin-left);
-		    @include transition-duration(0.2s);
-		    margin-left: 50px;
-		}
 
             }
 	    i {
-		@include transition-property(margin-left);
-		@include transition-duration(0.2s);
-		margin-left: 45px;
 		text-shadow: 2px 1px 0px #fff;
 	    }
 	    a {
@@ -98,6 +87,7 @@ span.username {
                 height: 110px;
 		float: none;
 		color: #111;
+		text-align: center;
 		&:focus {
 		    outline: none;
 		}
