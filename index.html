@@ -2,29 +2,48 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <link href="stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Ubuntu|Open+Sans' rel='stylesheet' type='text/css'>
-
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
-    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+    <link href="css/flat-ui.css" rel="stylesheet">
+    <link href="stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
     <title>Kalvi - admin theme</title>
   </head>
   <body>
-    <div class="base">
-    <div id="tabs">
-    <ul>
-    <li><a id="tab1" href="response1.html"><i class="fa fa-cog fa-2x"></i><div align="center">Settings</div></a></li>
-    <li><a id="tab2" href="response2.html"><i class="fa fa-book fa-2x"></i><div align="center">Courses</div></a></li>
-    <li><a id="tab3" href="response3.html"><i class="fa fa-puzzle-piece fa-2x"></i><div align="center">Sessions</div></a></li>
-    </ul>
+    <div class="container-fluid">
+      <div id="tabs">
+	<ul>
+	  <li><a class="tab" href="response1.html"><i class="fa fa-dashboard fa-2x"></i><div align="center">Dashboard</div></a></li>
+	  <li><a class="tab" href="response2.html"><i class="fa fa-rocket fa-2x"></i><div align="center">Shortcuts</div></a></li>
+	  <li><a class="tab" href="response3.html"><i class="fa fa-book fa-2x"></i><div align="center">Courses</div></a></li>
+	  <li><a class="tab" href="response1.html"><i class="fa fa-wrench fa-2x"></i><div align="center">Kalvi Settings</div></a></li>
+	  <li><a class="tab" href="response2.html"><i class="fa fa-gears fa-2x"></i><div align="center">Site Settings</div></a></li>
+	  <li><a class="tab" href="response3.html"><i class="fa fa-group fa-2x"></i><div align="center">People</div></a></li>
+	  <li><a class="tab" href="response3.html"><i class="fa fa-puzzle-piece fa-2x"></i><div align="center">App Store</div></a></li>
+	  <li><a class="tab" href="response3.html"><i class="fa fa-magic fa-2x"></i><div align="center">Look and Feel</div></a></li>
+	</ul>
+      </div>
+      <nav class="navbar navbar-inverse navbar-embossed" role="navigation">
+        <div class="collapse navbar-collapse" id="navbar-collapse-01">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user icon"></i>Welcome, <span class="username">Badri</span> <b class="caret"></b></a>
+              <span class="dropdown-arrow"></span>
+              <ul class="dropdown-menu">
+                <li><a href="#"><i class="fa fa-eye icon"></i>View Profile</a></li>
+                <li><a href="#"><i class="fa fa-pencil icon"></i>Edit Profile</a></li>
+                <li><a href="#"><i class="fa fa-key icon"></i>Change Password</a></li>
+              </ul>
+            </li>
+            <li><a href="#fakelink"><i class="fa fa-power-off icon"></i>Logout</a></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </nav><!-- /navbar -->
 
-    <div id="preloader">
-      <img src="http://blog.chapagain.com.np/examples/jquery-ajax-tabs/loading.gif" align="absmiddle"> Loading...
     </div>
-    </div>
-
-</div>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
   </body>
-  <script src="script.js"></script>
 </html>
