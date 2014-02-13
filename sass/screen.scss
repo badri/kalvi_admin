@@ -8,6 +8,9 @@
 $selected-tab: #ffec8b;
 $normal-tab: #ececec;
 
+$menu-bg: #111;
+$menu-fg: #eee;
+
 @import "compass-ui/theme/absolution";
 
 @include absolution-theme;
@@ -18,9 +21,35 @@ div.container-fluid {
 
 nav {
   font-family: 'Open Sans', sans-serif;
+  background: $menu-bg;
+  a {
+    color: $menu-fg;
+    &:hover, &:focus {
+      color: $selected-tab;
+    }
+  }
+  ul.dropdown-menu {
+    background: $menu-bg;
+    color: $menu-fg;
+  a {
+    color: $menu-fg;
+    &:hover {
+	color: $menu-bg;
+    }
+  }
+  .caret {
+    border-bottom-color: $selected-tab;
+    border-top-color: $selected-tab;
+  }
+  }
+  height: 55px;
+  .dropdown-arrow {
+    border-color: rgba(0,0,0,0) rgba(0,0,0,0) $menu-bg;
+  }
 }
 
 nav.navbar {
+  top: 0px;
   position:fixed;
   width: 100%;
   @include border-radius(0);
@@ -35,17 +64,12 @@ span.username {
 
 #tabs {
     padding-left: 0px;
-    background: #fff;
-    border: none;
-}
-
-
-#tabs {
     width: 140px;
-    position:fixed;
+    position:absolute;
     left:0px;
-    top: 7%;
+    top: 0px;
     z-index: 100;
+    height: auto;
     ul {
         @include no-bullets;
         border-bottom: 4px solid #ccc;
@@ -59,7 +83,7 @@ span.username {
 	    &.active {
 		padding-bottom: 0;
 		background: $selected-tab;
-		width: 150px;
+		width: 105%;
 	        &:hover {
 		    background: $selected-tab;
 		}
@@ -68,13 +92,13 @@ span.username {
 		font-family: 'Open Sans', sans-serif;
 		font-weight: bold;
 		text-shadow: 2px 1px 0px #fff;
-		margin-top: 4px;
+		margin-top: 5%;
 	    }
 	    &:hover {
                 background: darken($normal-tab, 5%);
 		@include transition-property(width);
 		@include transition-duration(0.2s);
-		width: 150px;
+		width: 105%;
 
             }
 	    i {
@@ -83,10 +107,11 @@ span.username {
 	    a {
 		@include single-box-shadow(rgba(#333, 0.5), -4px, 13px, 11px);
 		display:block;
-		padding-top: 20px;
-                height: 110px;
+		padding-top: 18%;
+                height: 110%;
+		padding-bottom: 18%;
 		float: none;
-		color: #111;
+		color: $menu-bg;
 		text-align: center;
 		&:focus {
 		    outline: none;
@@ -99,23 +124,21 @@ span.username {
 }
 
 #box{
-  margin-top: 4%;
-  border-bottom: 4px solid #111;
+  position: fixed;
+  top: 55px;
   padding: 0;
 }
 
 /* course styles */
 
 #course-tabs {
-    margin-left: 8%;
+    margin-left: 160px;
     a {
 	margin: 0;
     }
     i {
       padding-right: 5px;
     }
-}
-
 
 .tab-button {
     @include single-box-shadow(rgba(#333, 0.5), -4px, 2px, 5px);
@@ -125,18 +148,31 @@ span.username {
     background: $normal-tab;
     padding-left: 3em;
     padding-right: 3em;
-    color: #111;
-    @include border-radius(0);
+    color: $menu-bg;
+    @include border-bottom-left-radius(30px);
+    @include border-bottom-right-radius(30px);
     &:focus {
 	background-color: $selected-tab;
-        color: #111;
+        color: $menu-bg;
     }
     &:hover {
 	background-color: darken($normal-tab, 5%);
-        color: #111;
+        color: $menu-bg;
     &:focus {
 	background-color: $selected-tab;
-        color: #111;
+        color: $menu-bg;
     }
     }
+}
+
+}
+
+#tabs {
+#kalvi-home {
+  background: $menu-bg;
+  div,i {
+  color: $menu-fg;
+  text-shadow: none;
+  }
+}
 }
