@@ -20,46 +20,51 @@ div.container-fluid {
 }
 
 nav {
-  font-family: 'Open Sans', sans-serif;
-  background: $menu-bg;
-  a {
-    color: $menu-fg;
-    &:hover, &:focus {
-      color: $selected-tab;
-    }
-  }
-  ul.dropdown-menu {
+    font-family: 'Open Sans', sans-serif;
     background: $menu-bg;
-    color: $menu-fg;
-  a {
-    color: $menu-fg;
-    &:hover {
-	color: $menu-bg;
+    a {
+	color: $menu-fg;
+	&:hover, &:focus {
+	    color: $selected-tab;
+	}
     }
-  }
-  .caret {
-    border-bottom-color: $selected-tab;
-    border-top-color: $selected-tab;
-  }
-  }
-  height: 55px;
-  .dropdown-arrow {
-    border-color: rgba(0,0,0,0) rgba(0,0,0,0) $menu-bg;
-  }
+    ul.dropdown-menu {
+	background: $menu-bg;
+	color: $menu-fg;
+	a {
+	    color: $menu-fg;
+	    &:hover {
+		color: $menu-bg;
+	    }
+	}
+    }
+    height: 55px;
+    .dropdown-arrow {
+	border-color: rgba(0,0,0,0) rgba(0,0,0,0) $menu-bg;
+    }
 }
 
 nav.navbar {
-  top: 0px;
-  position:fixed;
-  width: 100%;
-  @include border-radius(0);
-  i {
-    padding-right: 5px;
-  }
+    top: 0px;
+    position:fixed;
+    width: 100%;
+    @include border-radius(0);
+    i {
+	padding-right: 5px;
+    }
+}
+
+.navbar-nav > li > a:hover .caret,
+.navbar-nav > li > a:focus .caret,
+.navbar-nav .open > a:focus .caret,
+.navbar-nav .open > a:hover .caret,
+.navbar-nav .dropdown-toggle .caret {
+    border-bottom-color: $selected-tab;
+    border-top-color: $selected-tab;
 }
 
 span.username {
-  font-weight: bold;
+    font-weight: bold;
 }
 
 #tabs {
@@ -124,9 +129,45 @@ span.username {
 }
 
 #box{
-  position: fixed;
-  top: 55px;
-  padding: 0;
+    position: fixed;
+    top: 55px;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    .form-control {
+	@include border-radius(0);
+	@include transition-property(border-color);
+	@include transition-duration(0.25s);
+	&:focus {
+	    @include transition-property(border-color);
+	    @include transition-duration(0.25s);
+	    border-color: #111;
+	}
+    }
+    .btn-primary {
+	background-color: #2c3e50;
+	text-transform: uppercase;
+	font-weight: bold;
+    }
+}
+
+legend {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+label {
+    margin-left: 5px;
+    padding: 8px;
+    color: #eee;
+    background: #111;
+    font-weight: bold;
+}
+
+.control-group {
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 /* course styles */
@@ -137,42 +178,42 @@ span.username {
 	margin: 0;
     }
     i {
-      padding-right: 5px;
+	padding-right: 5px;
     }
 
-.tab-button {
-    @include single-box-shadow(rgba(#333, 0.5), -4px, 2px, 5px);
-    font-family: 'Droid Sans', sans-serif;
-    font-weight: bold;
-    text-transform: uppercase;
-    background: $normal-tab;
-    padding-left: 3em;
-    padding-right: 3em;
-    color: $menu-bg;
-    @include border-bottom-left-radius(30px);
-    @include border-bottom-right-radius(30px);
-    &:focus {
-	background-color: $selected-tab;
-        color: $menu-bg;
+    .tab-button {
+	@include single-box-shadow(rgba(#333, 0.5), -4px, 2px, 5px);
+	font-family: 'Droid Sans', sans-serif;
+	font-weight: bold;
+	text-transform: uppercase;
+	background: $normal-tab;
+	padding-left: 3em;
+	padding-right: 3em;
+	color: $menu-bg;
+	@include border-bottom-left-radius(30px);
+	@include border-bottom-right-radius(30px);
+	&:focus {
+	    background-color: $selected-tab;
+            color: $menu-bg;
+	}
+	&:hover {
+	    background-color: darken($normal-tab, 5%);
+            color: $menu-bg;
+	    &:focus {
+		background-color: $selected-tab;
+		color: $menu-bg;
+	    }
+	}
     }
-    &:hover {
-	background-color: darken($normal-tab, 5%);
-        color: $menu-bg;
-    &:focus {
-	background-color: $selected-tab;
-        color: $menu-bg;
-    }
-    }
-}
 
 }
 
 #tabs {
-#kalvi-home {
-  background: $menu-bg;
-  div,i {
-  color: $menu-fg;
-  text-shadow: none;
-  }
-}
+    #kalvi-home {
+	background: $menu-bg;
+	div,i {
+	    color: $menu-fg;
+	    text-shadow: none;
+	}
+    }
 }
