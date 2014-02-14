@@ -3085,37 +3085,38 @@ div.container-fluid {
 
 /* line 22, ../sass/screen.scss */
 nav {
+  z-index: 100;
   font-family: 'Open Sans', sans-serif;
   background: #111111;
   height: 55px;
 }
-/* line 25, ../sass/screen.scss */
+/* line 26, ../sass/screen.scss */
 nav a {
   color: #eeeeee;
 }
-/* line 27, ../sass/screen.scss */
+/* line 28, ../sass/screen.scss */
 nav a:hover, nav a:focus {
   color: #ffec8b;
 }
-/* line 31, ../sass/screen.scss */
+/* line 32, ../sass/screen.scss */
 nav ul.dropdown-menu {
   background: #111111;
   color: #eeeeee;
 }
-/* line 34, ../sass/screen.scss */
+/* line 35, ../sass/screen.scss */
 nav ul.dropdown-menu a {
   color: #eeeeee;
 }
-/* line 36, ../sass/screen.scss */
+/* line 37, ../sass/screen.scss */
 nav ul.dropdown-menu a:hover {
   color: #111111;
 }
-/* line 42, ../sass/screen.scss */
+/* line 43, ../sass/screen.scss */
 nav .dropdown-arrow {
   border-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) #111111;
 }
 
-/* line 47, ../sass/screen.scss */
+/* line 48, ../sass/screen.scss */
 nav.navbar {
   top: 0px;
   position: fixed;
@@ -3126,12 +3127,12 @@ nav.navbar {
   -o-border-radius: 0;
   border-radius: 0;
 }
-/* line 52, ../sass/screen.scss */
+/* line 53, ../sass/screen.scss */
 nav.navbar i {
   padding-right: 5px;
 }
 
-/* line 61, ../sass/screen.scss */
+/* line 62, ../sass/screen.scss */
 .navbar-nav > li > a:hover .caret,
 .navbar-nav > li > a:focus .caret,
 .navbar-nav .open > a:focus .caret,
@@ -3141,22 +3142,22 @@ nav.navbar i {
   border-top-color: #ffec8b;
 }
 
-/* line 66, ../sass/screen.scss */
+/* line 67, ../sass/screen.scss */
 span.username {
   font-weight: bold;
 }
 
-/* line 70, ../sass/screen.scss */
+/* line 71, ../sass/screen.scss */
 #tabs {
   padding-left: 0px;
   width: 140px;
-  position: absolute;
+  position: fixed;
   left: 0px;
   top: 0px;
   z-index: 100;
   height: auto;
 }
-/* line 78, ../sass/screen.scss */
+/* line 79, ../sass/screen.scss */
 #tabs ul {
   list-style: none;
   border-bottom: 4px solid #ccc;
@@ -3167,7 +3168,7 @@ span.username {
   list-style-type: none;
   margin-left: 0;
 }
-/* line 81, ../sass/screen.scss */
+/* line 82, ../sass/screen.scss */
 #tabs ul li {
   -webkit-transition-property: width;
   -moz-transition-property: width;
@@ -3182,24 +3183,24 @@ span.username {
   border: none;
   background: #ececec;
 }
-/* line 88, ../sass/screen.scss */
+/* line 89, ../sass/screen.scss */
 #tabs ul li.active {
   padding-bottom: 0;
   background: #ffec8b;
   width: 105%;
 }
-/* line 92, ../sass/screen.scss */
+/* line 93, ../sass/screen.scss */
 #tabs ul li.active:hover {
   background: #ffec8b;
 }
-/* line 96, ../sass/screen.scss */
+/* line 97, ../sass/screen.scss */
 #tabs ul li div {
   font-family: 'Open Sans', sans-serif;
   font-weight: bold;
   text-shadow: 2px 1px 0px #fff;
   margin-top: 5%;
 }
-/* line 102, ../sass/screen.scss */
+/* line 103, ../sass/screen.scss */
 #tabs ul li:hover {
   background: #dfdfdf;
   -webkit-transition-property: width;
@@ -3212,11 +3213,11 @@ span.username {
   transition-duration: 0.2s;
   width: 105%;
 }
-/* line 109, ../sass/screen.scss */
+/* line 110, ../sass/screen.scss */
 #tabs ul li i {
   text-shadow: 2px 1px 0px #fff;
 }
-/* line 112, ../sass/screen.scss */
+/* line 113, ../sass/screen.scss */
 #tabs ul li a {
   -webkit-box-shadow: -4px 13px 11px rgba(51, 51, 51, 0.5);
   -moz-box-shadow: -4px 13px 11px rgba(51, 51, 51, 0.5);
@@ -3229,19 +3230,17 @@ span.username {
   color: #111111;
   text-align: center;
 }
-/* line 121, ../sass/screen.scss */
+/* line 122, ../sass/screen.scss */
 #tabs ul li a:focus {
   outline: none;
 }
 
-/* line 131, ../sass/screen.scss */
+/* line 132, ../sass/screen.scss */
 #box {
-  position: fixed;
   top: 55px;
-  padding: 0;
   font-family: 'Open Sans', sans-serif;
 }
-/* line 136, ../sass/screen.scss */
+/* line 135, ../sass/screen.scss */
 #box .form-control {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
@@ -3257,7 +3256,7 @@ span.username {
   -o-transition-duration: 0.25s;
   transition-duration: 0.25s;
 }
-/* line 140, ../sass/screen.scss */
+/* line 139, ../sass/screen.scss */
 #box .form-control:focus {
   -webkit-transition-property: border-color;
   -moz-transition-property: border-color;
@@ -3269,14 +3268,19 @@ span.username {
   transition-duration: 0.25s;
   border-color: #111;
 }
-/* line 146, ../sass/screen.scss */
+/* line 145, ../sass/screen.scss */
 #box .btn-primary {
   background-color: #2c3e50;
   text-transform: uppercase;
   font-weight: bold;
 }
 
-/* line 153, ../sass/screen.scss */
+/* line 152, ../sass/screen.scss */
+div.page {
+  margin-top: 100px;
+}
+
+/* line 156, ../sass/screen.scss */
 legend {
   padding-top: 20px;
   padding-bottom: 20px;
@@ -3284,7 +3288,7 @@ legend {
   font-weight: bold;
 }
 
-/* line 160, ../sass/screen.scss */
+/* line 163, ../sass/screen.scss */
 label {
   margin-left: 5px;
   padding: 8px;
@@ -3293,26 +3297,28 @@ label {
   font-weight: bold;
 }
 
-/* line 168, ../sass/screen.scss */
+/* line 171, ../sass/screen.scss */
 .control-group {
   padding-top: 20px;
   padding-bottom: 20px;
 }
 
 /* course styles */
-/* line 175, ../sass/screen.scss */
+/* line 178, ../sass/screen.scss */
 #course-tabs {
+  position: fixed;
+  z-index: 100;
   margin-left: 160px;
 }
-/* line 177, ../sass/screen.scss */
+/* line 182, ../sass/screen.scss */
 #course-tabs a {
   margin: 0;
 }
-/* line 180, ../sass/screen.scss */
+/* line 185, ../sass/screen.scss */
 #course-tabs i {
   padding-right: 5px;
 }
-/* line 184, ../sass/screen.scss */
+/* line 189, ../sass/screen.scss */
 #course-tabs .tab-button {
   -webkit-box-shadow: -4px 2px 5px rgba(51, 51, 51, 0.5);
   -moz-box-shadow: -4px 2px 5px rgba(51, 51, 51, 0.5);
@@ -3331,28 +3337,73 @@ label {
   -webkit-border-bottom-right-radius: 30px;
   border-bottom-right-radius: 30px;
 }
-/* line 195, ../sass/screen.scss */
+/* line 200, ../sass/screen.scss */
 #course-tabs .tab-button:focus {
   background-color: #ffec8b;
   color: #111111;
 }
-/* line 199, ../sass/screen.scss */
+/* line 204, ../sass/screen.scss */
 #course-tabs .tab-button:hover {
   background-color: #dfdfdf;
   color: #111111;
 }
-/* line 202, ../sass/screen.scss */
+/* line 207, ../sass/screen.scss */
 #course-tabs .tab-button:hover:focus {
   background-color: #ffec8b;
   color: #111111;
 }
 
-/* line 212, ../sass/screen.scss */
+/* line 217, ../sass/screen.scss */
 #tabs #kalvi-home {
   background: #111111;
 }
-/* line 214, ../sass/screen.scss */
+/* line 219, ../sass/screen.scss */
 #tabs #kalvi-home div, #tabs #kalvi-home i {
   color: #eeeeee;
   text-shadow: none;
+}
+
+/* sessions */
+/* line 227, ../sass/screen.scss */
+article.sessions ul {
+  list-style: none;
+}
+/* line 11, ../../../lib/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/lists/_bullets.scss */
+article.sessions ul li {
+  list-style-image: none;
+  list-style-type: none;
+  margin-left: 0;
+}
+/* line 229, ../sass/screen.scss */
+article.sessions ul li {
+  padding: 20px;
+  background: #ececec;
+  color: #eeeeee;
+  border-bottom: 3px solid #dadada;
+}
+/* line 234, ../sass/screen.scss */
+article.sessions ul li:hover {
+  background: #dfdfdf;
+}
+/* line 237, ../sass/screen.scss */
+article.sessions ul li a {
+  color: #111;
+}
+/* line 239, ../sass/screen.scss */
+article.sessions ul li a .title {
+  position: relative;
+  top: -30px;
+  font-weight: bold;
+  font-size: 22px;
+  padding-left: 20px;
+}
+/* line 247, ../sass/screen.scss */
+article.sessions ul li a span.thumbnails img {
+  /* padding-right: 20px; */
+}
+/* line 251, ../sass/screen.scss */
+article.sessions ul li a span.edit {
+  float: right;
+  position: relative;
+  top: 20px;
 }

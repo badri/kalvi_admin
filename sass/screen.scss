@@ -20,6 +20,7 @@ div.container-fluid {
 }
 
 nav {
+    z-index:100;
     font-family: 'Open Sans', sans-serif;
     background: $menu-bg;
     a {
@@ -70,7 +71,7 @@ span.username {
 #tabs {
     padding-left: 0px;
     width: 140px;
-    position:absolute;
+    position:fixed;
     left:0px;
     top: 0px;
     z-index: 100;
@@ -129,9 +130,7 @@ span.username {
 }
 
 #box{
-    position: fixed;
     top: 55px;
-    padding: 0;
     font-family: 'Open Sans', sans-serif;
     .form-control {
 	@include border-radius(0);
@@ -148,6 +147,10 @@ span.username {
 	text-transform: uppercase;
 	font-weight: bold;
     }
+}
+
+div.page {
+    margin-top: 100px;
 }
 
 legend {
@@ -173,6 +176,8 @@ label {
 /* course styles */
 
 #course-tabs {
+    position: fixed;
+    z-index: 100;
     margin-left: 160px;
     a {
 	margin: 0;
@@ -214,6 +219,40 @@ label {
 	div,i {
 	    color: $menu-fg;
 	    text-shadow: none;
+	}
+    }
+}
+
+/* sessions */
+article.sessions ul {
+    @include no-bullets;
+    li {
+	padding: 20px;
+	background: $normal-tab;
+	color: $menu-fg;
+	border-bottom: 3px solid darken($normal-tab, 7%);
+	&:hover {
+	    background: darken($normal-tab, 5%);
+	}
+	a {
+	    color: #111;
+	    .title {
+		position: relative;
+		top: -30px;
+		font-weight: bold;
+		font-size: 22px;
+		padding-left: 20px;
+	    }
+	    span.thumbnails {
+		img {
+		    /* padding-right: 20px; */
+		}
+	    }
+	    span.edit {
+		float: right;
+		position: relative;
+		top: 20px;
+	    }
 	}
     }
 }
