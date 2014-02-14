@@ -238,7 +238,6 @@ article.sessions ul {
 	    color: #111;
 	    .title {
 		position: relative;
-		top: -30px;
 		font-weight: bold;
 		font-size: 22px;
 		padding-left: 20px;
@@ -249,7 +248,7 @@ article.sessions ul {
 		}
 	    }
 	    span.edit {
-		float: right;
+		left: 30px;
 		position: relative;
 		top: 20px;
 	    }

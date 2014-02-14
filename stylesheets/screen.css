@@ -3392,18 +3392,17 @@ article.sessions ul li a {
 /* line 239, ../sass/screen.scss */
 article.sessions ul li a .title {
   position: relative;
-  top: -30px;
   font-weight: bold;
   font-size: 22px;
   padding-left: 20px;
 }
-/* line 247, ../sass/screen.scss */
+/* line 246, ../sass/screen.scss */
 article.sessions ul li a span.thumbnails img {
   /* padding-right: 20px; */
 }
-/* line 251, ../sass/screen.scss */
+/* line 250, ../sass/screen.scss */
 article.sessions ul li a span.edit {
-  float: right;
+  left: 30px;
   position: relative;
   top: 20px;
 }
